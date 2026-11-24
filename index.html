@@ -16,47 +16,61 @@
 
   <main>
     <article>
-      <img src="images.jpeg"
-        alt="Ícone ilustrativo de moda: um cabide minimalista com uma camiseta dobrada ao lado, em tons de azul e branco.">
-      <div>
+      <img src="images.jpeg" alt="Peças essenciais do guarda-roupa">
+      <div class="artigo-conteudo">
         <h2>Meu primeiro post: Peças essenciais do guarda-roupa</h2>
         <p class="artigo-autor">Por: Rick</p>
         <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar ideias de looks versáteis e como escolher tecidos
           confortáveis para o dia a dia.</p>
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
+        <div class="reacoes">
+          <button class="btn-reacao">❤️ <span>0</span></button>
+          <button class="btn-reacao">👍 <span>0</span></button>
+        </div>
       </div>
     </article>
 
     <article>
-      <img src="roupa.png"
-        alt="Ícone ilustrativo de moda: um cabide minimalista com uma camiseta dobrada ao lado, em tons de azul e branco.">
-      <div>
+      <img src="roupa.png" alt="Como combinar cores neutras">
+      <div class="artigo-conteudo">
         <h2>Meu segundo post: Como combinar cores neutras</h2>
         <p class="artigo-autor">Por: Rick</p>
         <p>Descubra como misturar tons como branco, bege, preto e azul-marinho para criar visuais elegantes sem esforço.
         </p>
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
+        <div class="reacoes">
+          <button class="btn-reacao">❤️ <span>0</span></button>
+          <button class="btn-reacao">👍 <span>0</span></button>
+        </div>
       </div>
     </article>
 
     <article>
-  <img src="court.jpeg" alt="Ícone ilustrativo de moda...">
-  <div>
-    <h2>Como montar looks estilosos com o Nike Court Vision Alta</h2>
-    <p class="artigo-autor">Por: Rick</p>
-    <p>Descubra combinações versáteis para usar esse tênis plataforma no dia a dia, equilibrando conforto e atitude em qualquer produção.</p>
-    
-    <!-- Os botões precisam ficar AQUI DENTRO da div, logo abaixo do parágrafo -->
-    <div class="reacoes"> <!-- ou a classe/tag que você usou nos posts anteriores -->
-      <button>❤️ 0</button>
-      <button>👍 0</button>
-    </div>
-  </div>
-</article>
+      <img src="court.jpeg" alt="Tênis Nike Court Vision Alta">
+      <div class="artigo-conteudo">
+        <h2>Meu terceiro post: Como montar looks estilosos com o Nike Court Vision Alta</h2>
+        <p class="artigo-autor">Por: Rick</p>
+        <p>Descubra combinações versáteis para usar esse tênis plataforma no dia a dia, equilibrando conforto e atitude
+          em qualquer produção.</p>
+        <div class="reacoes">
+          <button class="btn-reacao">❤️ <span>0</span></button>
+          <button class="btn-reacao">👍 <span>0</span></button>
+        </div>
+      </div>
     </article>
   </main>
+
+  <script>
+    // Faz todos os botões de reação aumentarem o número ao clicar
+    const botoes = document.querySelectorAll('.btn-reacao');
+
+    botoes.forEach(botao => {
+      botao.addEventListener('click', () => {
+        const contador = botao.querySelector('span');
+        let numeroAtual = parseInt(contador.textContent);
+        contador.textContent = numeroAtual + 1;
+        botao.classList.add('clicado');
+      });
+    });
+  </script>
 </body>
 
-</html>   
+</html>
