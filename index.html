@@ -58,8 +58,15 @@
     </article>
   </main>
 
+  <footer>
+    <p>© 2026 Meu Blog de Moda — Criado por Rick</p>
+  </footer>
+
+  
+  <button class="btn-tema-escuro" id="btnTema" title="Alternar tema">🌙</button>
+
   <script>
-    // Faz todos os botões de reação aumentarem o número ao clicar
+    
     const botoes = document.querySelectorAll('.btn-reacao');
 
     botoes.forEach(botao => {
@@ -69,6 +76,20 @@
         contador.textContent = numeroAtual + 1;
         botao.classList.add('clicado');
       });
+    });
+
+    
+    const btnTema = document.getElementById('btnTema');
+
+    btnTema.addEventListener('click', () => {
+      document.body.classList.toggle('tema-escuro');
+
+     
+      if (document.body.classList.contains('tema-escuro')) {
+        btnTema.textContent = '☀️';
+      } else {
+        btnTema.textContent = '🌙';
+      }
     });
   </script>
 </body>
